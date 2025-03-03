@@ -25,7 +25,27 @@ static double CalculateAverage(int[] numbers)
     return sum / numbers.Length;
 }
 
+static int FindMaxValue(int[] numbers)
+{
+    if (numbers == null || numbers.Length == 0)
+    {
+        throw new ArgumentException("Array cannot be null or empty");
+    }
+
+    int maxValue = numbers[0];
+    foreach (int number in numbers)
+    {
+        if (number > maxValue)
+        {
+            maxValue = number;
+        }
+    }
+
+    return maxValue;
+}
+
 int[] numbers = { 1, 2, 3, 4, 5 };
 Console.WriteLine(CalculateAverage(numbers));
+Console.WriteLine(FindMaxValue(numbers));
 
 return 0;
