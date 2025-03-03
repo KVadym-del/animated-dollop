@@ -16,13 +16,13 @@ static double CalculateAverage(int[] numbers)
         throw new ArgumentException("Array cannot be null or empty");
     }
 
-    double sum_super = 0;
+    double sum_fixed = 0;
     foreach (int number in numbers)
     {
-        sum_super += number;
+        sum_fixed += number;
     }
 
-    return sum_super / numbers.Length;
+    return sum_fixed / numbers.Length;
 }
 
 static int FindMaxValue(int[] numbers)
